@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maceta IoT - Proyecto</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title ">Maceta IoT - Proyecto de Monitoreo Inteligente</h1>
+        <div class="user-info">
+            <span class="username">User Prueba</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Icon" class="user-icon">
+        </div>
+    </header>
+
+    <nav>
+        <a onclick="showTab('proyecto')" class="active">El Proyecto</a>
+        <a onclick="showTab('sensores')">Sensores</a>
+        <a onclick="showTab('tecnologia')">Tecnología</a>
+        <a onclick="showTab('ml-graph-section')">Datos en Tiempo Real</a>
+        <a onclick="showTab('historico')">Historico</a>
+        <a onclick="showTab('estado-planta')">Estado de la Planta</a>
+        <a onclick="showTab('dashboard')">Dashboard</a>
+    </nav>
+
+    <section id="proyecto" class="content active">
+        <h2>¿Qué es la Maceta IoT?</h2>
+        <div class="card">
+
+            <p style="text-align: justify;"></p>
+            Es un sistema inteligente que monitorea y optimiza el cuidado de las plantas mediante sensores y algoritmos
+            de machine learning. Analiza en tiempo real las condiciones ambientales y del suelo para predecir
+            necesidades de riego y otros cuidados, mejorando así la salud de la planta de manera autónoma.
+            </p>
+        </div>
+    </section>
+
+    <section id="sensores" class="content">
+        <h2>Algunos Sensores Utilizados</h2>
+        <div class="carousel">
+            <div class="card">
+                <h3>DHT11</h3>
+                <p>Sensor de temperatura y humedad</p>
+            </div>
+            <div class="card">
+                <h3>Sensor de CO2</h3>
+                <p>Monitoreo de calidad del aire</p>
+            </div>
+            <div class="card">
+                <h3>Sensor de luz</h3>
+                <p>Detección de niveles de iluminación</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="tecnologia" class="content">
+        <h2>Tecnologías Utilizadas</h2>
+        <p>Raspberry Pi / ESP32, sensores DHT11, CO2, Firebase, Machine Learning.</p>
+    </section>
+
+    <section id="ml-graph-section" class="content">
+        <h2>Comportamiento del Modelo de Machine Learning</h2>
+        <p>Predicción de riego basada en temperatura y humedad.</p>
+    
+        <div class="chart-container">
+            <canvas id="mlBehaviorChart"></canvas>
+        </div>
+    </section>
+    
+
+    <section id="estado-planta" class="content">
+        <h2>Estado de la Planta</h2>
+        <div id="estado-container" class="estado-saludable">
+            <h3 id="estado-texto">🌱 Saludable</h3>
+            <p id="mensaje-recomendacion">Tu planta está en buen estado. Mantén los niveles actuales.</p>
+        </div>
+    </section>
+
+    <section id="historico" class="content">
+        <h2>Datos Históricos</h2>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+
+    <section id="dashboard" class="content">
+        <h2>Dashboard de Control</h2>
+
+        <div class="dashboard-container">
+            <!-- Tarjetas de estado -->
+            <div class="card">
+                <h3>🌡 Temperatura</h3>
+                <p id="temp-value">-- °C</p>
+            </div>
+            <div class="card">
+                <h3>💧 Humedad</h3>
+                <p id="humedad-value">-- %</p>
+            </div>
+            <div class="card">
+                <h3>🫁 CO2</h3>
+                <p id="co2-value">-- ppm</p>
+            </div>
+            <div class="card">
+                <h3>🌱 Estado de la Planta</h3>
+                <p id="estado-planta2">Cargando...</p>
+            </div>
+        </div>
+
+        <!-- Gráfico de datos -->
+        <div class="chart-container">
+            <canvas id="historicalChart"></canvas>
+        </div>
+
+        <!-- Logs de eventos -->
+        <div class="logs">
+            <h3>Registro de Eventos</h3>
+            <ul id="event-log"></ul>
+        </div>
+    </section>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

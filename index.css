@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 1.5em;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.header .title {
+    flex: 1;
+    text-align: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-right: 10px;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    cursor: pointer;
+    background: #333;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a.active {
+    background: #4CAF50;
+}
+
+
+.content {
+    display: none;
+    padding: 20px;
+}
+
+.content.active {
+    display: block;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    text-align: center;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background: #4CAF50;
+    color: white;
+}
+
+#historico {
+    text-align: center;
+    padding: 20px;
+}
+.chart-container {
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dashboard-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 150px;
+}
+
+.configuracion {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.configuracion input {
+    width: 50%;
+}
+
+.chart-container {
+    width: 80%;
+    margin: auto;
+}
+
+.logs {
+    margin-top: 20px;
+    background: #222;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.logs ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+#estado-container{
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+#ml-graph-section {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+canvas {
+    max-width: 100%;
+    height: 400px;
+}
+.estado-saludable { background-color: #8BC34A; color: white; }
+.estado-alerta { background-color: #FFC107; color: black; }
+.estado-peligro { background-color: #F44336; color: white; }
